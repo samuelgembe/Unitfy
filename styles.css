@@ -13,6 +13,18 @@
     box-sizing: border-box;
 }
 
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
 body {
 
     font-family: var(--font-main);
@@ -42,6 +54,9 @@ img, picture, video, canvas, svg {
     max-width: 900px;
     margin: 0 auto;
     padding: 20px;
+    min-height: 100vh;   
+    display: flex;         
+    flex-direction: column;
 }
 
 #brand-header{
@@ -109,8 +124,9 @@ img, picture, video, canvas, svg {
     gap: 8px;
 }
 
-.tab-btn:hover{
+.tab-btn:not(.active):hover{
     background-color: var(--transparent-gray);
+    cursor: pointer;
 }
 
 .active{
@@ -135,21 +151,6 @@ i{
     flex-direction: column;
 }
 
-.swap-button{
-    width: 64px;
-    border: none;
-    background: none;
-    padding: 12px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 20px;
-}
-
-.ph-swap{
-    font-size: 40px;
-}
-
 .text-unit{
     font-weight: 700;
 }
@@ -160,7 +161,37 @@ i{
     border: 1px solid var(--light-gray);
     background: none;
     border-radius: 12px;
-    
+    color: var(--text-color);
+    padding: 32px 20px;
+    outline: none;
 }
+
+input:focus{
+    border: 1px solid var(--accent-color);
+}
+
+input::placeholder {
+  opacity: 0.8;
+  color: var(--light-gray);
+}
+
+#label-from, #label-to{
+    margin-bottom: 4px;
+}
+
+.main-footer{
+    margin-top: auto;
+    text-align: center;
+    font-size: .85rem;
+    color: var(--text-color);
+}
+
+.main-footer a{
+    color: var(--accent-color);
+    text-decoration: none;
+    font-weight: 700;
+}
+
+
 
 
