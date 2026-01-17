@@ -8,6 +8,9 @@ const inputFrom = document.getElementById("input-from")
 const inputTo = document.getElementById("input-to")
 const labelFrom = document.querySelector("#label-from span")
 const labelTo = document.querySelector("#label-to span")
+const btnWeight = document.getElementById("btn-weight")
+const btnVolume = document.getElementById("btn-volume")
+const btnDistance = document.getElementById("btn-distance")
 
 let currentCategory = "weight"
 
@@ -53,6 +56,48 @@ function updateLeft() {
     let result = userVal / factor
     inputFrom.value = result.toFixed(3)
 }
+
+btnVolume.addEventListener("click", function() {
+    currentCategory = "volume"
+
+    btnVolume.classList.add("active")
+    btnDistance.classList.remove("active")
+    btnWeight.classList.remove("active")
+
+    labelFrom.textContent = unitData[currentCategory].fromUnit
+    labelTo.textContent = unitData[currentCategory].toUnit
+
+    inputFrom.value = ""
+    inputTo.value = ""
+})
+
+btnWeight.addEventListener("click", function() {
+    currentCategory = "weight"
+
+    btnVolume.classList.remove("active")
+    btnDistance.classList.remove("active")
+    btnWeight.classList.add("active")
+
+    labelFrom.textContent = unitData[currentCategory].fromUnit
+    labelTo.textContent = unitData[currentCategory].toUnit
+
+    inputFrom.value = ""
+    inputTo.value = ""
+})
+
+btnDistance.addEventListener("click", function() {
+    currentCategory = "distance"
+
+    btnVolume.classList.remove("active")
+    btnDistance.classList.add("active")
+    btnWeight.classList.remove("active")
+
+    labelFrom.textContent = unitData[currentCategory].fromUnit
+    labelTo.textContent = unitData[currentCategory].toUnit
+
+    inputFrom.value = ""
+    inputTo.value = ""
+})
 
 
 inputFrom.addEventListener("input", updateRight)
