@@ -3,7 +3,7 @@
 > A utility-first unit converter built to practice JavaScript logic, DOM manipulation, and responsive UI design.
 
 
-![Unitfy Screenshot](<img width="1512" height="830" alt="Screenshot 2026-01-21 at 1 00 13 PM" src="https://github.com/user-attachments/assets/85fccf70-2d22-4892-8225-eba3b37735cb" />)
+![Unitfy Screenshot] <img width="1512" height="830" alt="Screenshot 2026-01-21 at 1 00 13 PM" src="https://github.com/user-attachments/assets/85fccf70-2d22-4892-8225-eba3b37735cb" />
 
 ## 🚀 Live Demo
 [View Live Project on Netlify](https://unitfyconverter.netlify.app/)
