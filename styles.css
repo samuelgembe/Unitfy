@@ -193,3 +193,39 @@ input::placeholder {
 
 
 
+@media screen and (max-width: 729px) {
+    .tabs-container{
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 12px;
+    }
+
+    .logo-icon{
+        width: 80%;
+    }
+
+    .brand-name{
+        font-size: 1.5rem;
+    }
+
+    .headline{
+        font-size: 2rem;
+    }
+
+    #hero-section{
+        margin-top: 40px;
+    }
+
+
+    .sub-headline{
+        font-size: 1rem;
+    }
+
+    .converter-box{
+        flex-direction: column;
+    }
+
+    .main-footer{
+        margin-top: 80px;
+    }
+}
