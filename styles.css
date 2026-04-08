@@ -249,6 +249,8 @@ input::placeholder {
         min-width: 140px;
         padding: 12px 16px;
         font-size: 0.9rem;
+        min-width: auto; /* Quita el mínimo que empuja el borde */
+        flex: 1 1 40%;   /* Deja que se ajusten al contenedor */
     }
 
     /* Este truco hace que si el último botón está solo, se quede centrado */
