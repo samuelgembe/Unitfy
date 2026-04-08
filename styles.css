@@ -151,6 +151,8 @@ i{
 
 .text-unit{
     font-weight: 700;
+    color: var(--text-color) !important; /* Esto obliga a usar tu azul marino */
+    text-decoration: none !important;    /* Quita cualquier subrayado automático */
 }
 
 .input-group input{
