@@ -110,7 +110,7 @@ img, picture, video, canvas, svg {
     gap: 32px;
 }
 
-.tab-btn{
+.tab-btn {
     border: none;
     background: none;
     align-items: center;
@@ -120,6 +120,7 @@ img, picture, video, canvas, svg {
     display: flex;
     justify-content: center;
     gap: 8px;
+    color: var(--text-color); 
 }
 
 .tab-btn:not(.active):hover{
