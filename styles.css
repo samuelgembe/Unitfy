@@ -195,10 +195,22 @@ input::placeholder {
 
 
 @media screen and (max-width: 729px) {
-    .tabs-container{
-        flex-wrap: wrap;
+
+    #app-interface {
+        margin-top: 20px; 
+    }
+
+    #hero-section {
+        margin-top: 40px;
+        margin-bottom: 10px; /* Reducimos el margen inferior del hero */
+    }
+
+    .tabs-container {
+        display: flex;
+        flex-wrap: wrap; /* Permite que los botones salten de línea */
         justify-content: center;
         gap: 12px;
+        width: 100%; /* Asegura que use el ancho disponible */
     }
 
     .logo-icon{
@@ -228,6 +240,21 @@ input::placeholder {
 
     .main-footer{
         margin-top: 80px;
+    }
+
+    .tab-btn {
+        /* Al poner 45%, obligamos a que solo quepan 2 por línea (45+45=90%) 
+           El 10% restante lo absorbe el gap */
+        flex: 1 1 45%; 
+        min-width: 140px;
+        padding: 12px 16px;
+        font-size: 0.9rem;
+    }
+
+    /* Este truco hace que si el último botón está solo, se quede centrado */
+    .tab-btn:last-child {
+        flex-grow: 0; 
+        min-width: 180px; 
     }
     
 }
